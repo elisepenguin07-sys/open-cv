@@ -11,7 +11,7 @@ st.write("To understand which data are harder to collect, we will first identify
 df_na = df.isna().sum()
 
 fig1, ax1 = plt.subplots()
-ax1.bar(df_na.index, df_na.values, color='skyblue')
+ax1.barh(df_na.index, df_na.values, color='skyblue')
 ax1.set_xlabel("Missing Data Columns")
 ax1.tick_params(axis='x', rotation=75)
 plt.tight_layout()
