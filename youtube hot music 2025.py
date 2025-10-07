@@ -9,7 +9,10 @@ df = pd.read_csv("youtube-top-100-songs-2025.csv")
 st.subheader("Youtube Top 100 songs 2025")
 st.write(df['title'])
 
-plt.scatter(df['view_count'],df['duration'])
-plt.xlabel("View count")
-plt.ylabel("Duration(seconds)")
-st.pyplot() 
+fig, ax = plt.subplots()  # 建立 figure 和 axis
+ax.scatter(df['duration'], df['view_count'])
+ax.set_xlabel('Duration (seconds)')
+ax.set_ylabel('View Count')
+ax.set_title('View Count vs Duration')
+
+st.pyplot(fig)
