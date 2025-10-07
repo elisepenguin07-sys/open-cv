@@ -1,6 +1,6 @@
 # data-analysis
 import pandas as pd
-import steamlit
+import streamlit
 
 st.header("YouTube Hot Music 2025")
 df = pd.read_csv("youtube-top-100-songs-2025.csv")
