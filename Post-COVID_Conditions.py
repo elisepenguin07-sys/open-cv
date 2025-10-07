@@ -12,5 +12,5 @@ df_na = df.isna().sum()
 
 fig1, ax1 = plt.subplots()
 ax1.hist(df_na, bins=8, linewidth=0.5, edgecolor="white")
-ax1.set_xlabel = ("Missing Data Columns")
-st.plot(fig1)
+ax1.set_xlabel("Missing Data Columns")
+st.pyplot(fig1)
