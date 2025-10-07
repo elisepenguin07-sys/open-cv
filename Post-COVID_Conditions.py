@@ -18,7 +18,7 @@ plt.tight_layout()
 st.pyplot(fig1)
 
 fig2, ax2 = plt.subplots()
-ax2.bar(df['Indicator'].value_counts().index, df['Indicator'].value_counts().values, color='skyblue')
+ax2.barh(df['Indicator'].value_counts().index, df['Indicator'].value_counts().values, color='skyblue')
 ax2.set_xlabel("Missing Data Columns")
 ax2.tick_params(axis='x', rotation=75)
 plt.tight_layout()
