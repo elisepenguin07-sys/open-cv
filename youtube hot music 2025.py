@@ -9,6 +9,7 @@ df = pd.read_csv("youtube-top-100-songs-2025.csv")
 st.subheader("Youtube Top 100 songs 2025")
 st.write(df['title'])
 
+pd.set_option('display.float_format', '{:.0f}'.format)
 fig, ax = plt.subplots()  # 建立畫布和座標軸
 ax.scatter(df['duration'], df['view_count'])  # 在座標軸上畫散點圖
 ax.set_xlabel('Duration (seconds)')  # 設定 x 軸標籤
