@@ -16,7 +16,7 @@ ax.set_ylabel('View Count')
 ax.set_title('View Count vs Duration') 
 st.pyplot(fig)
 
-fig2, ax2 = plt.subplots
+fig2, ax2 = plt.subplots()
 ax2.boxplot(x='categories',y='view_count',data = df)
 ax2.set_xlabel('Categorie')  
 ax2.set_ylabel('View Count') 
