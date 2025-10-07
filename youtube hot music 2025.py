@@ -18,7 +18,7 @@ ax.set_title('View Count vs Duration')
 st.pyplot(fig)
 
 fig2, ax2 = plt.subplots()
-sns.regplot(x='Categorie', y='view_count', data=df, scatter_kws={"alpha":0.5})
+sns.regplot(x='categories', y='view_count', data=df, scatter_kws={"alpha":0.5})
 ax2.set_xlabel('Categorie')  
 ax2.set_ylabel('View Count') 
 ax2.set_title('View Count vs Categorie') 
