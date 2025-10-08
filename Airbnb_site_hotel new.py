@@ -2,19 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-import io
 
 st.header("Airbnb site hotel")
 df = pd.read_csv("Airbnb_site_hotel new.csv")
-
-# 用 StringIO 暫存 info 的輸出
-buffer = io.StringIO()
-df.info(buf=buffer)
-info_str = buffer.getvalue()
-
-# 用 st.text 或 st.code 顯示
-st.subheader("Dataset Info")
-st.text(info_str)
 
 st.write("To understand which data are harder to collect, we will first identify the most challenging ones.")
 df_na = df.isna().sum()
@@ -34,4 +24,8 @@ ax2.set_title("Number of Listings per City")
 plt.xticks(rotation=45)
 plt.tight_layout()
 st.pyplot(fig2)
+
+st.write("This chart displays the average price in each city.")
+fig3, ax3 = plt.subplots()
+ax.
 
