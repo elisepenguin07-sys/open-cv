@@ -21,7 +21,7 @@ ax2.bar(df['city'].value_counts().index, df['city'].value_counts().values)
 ax2.set_xlabel("City")
 ax2.set_ylabel("Count")
 ax2.set_title("Number of Listings per City")
-ax2.xticks(rotation=45)
+plt.xticks(rotation=45)
 plt.tight_layout()
 st.pyplot(fig2)
 
