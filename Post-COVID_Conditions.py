@@ -3,10 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-st.header("Post-COVID Conditions")
-df = pd.read_csv("Post-COVID_Conditions.csv")
+st.header("Disney plus shows")
+df = pd.read_csv("disney_plus_shows.csv")
 
-st.subheader("Missing Data")
 st.write("To understand which data are harder to collect, we will first identify the most challenging ones.")
 df_na = df.isna().sum()
 
@@ -17,9 +16,5 @@ ax1.tick_params(axis='x', rotation=75)
 plt.tight_layout()
 st.pyplot(fig1)
 
-fig2, ax2 = plt.subplots()
-ax2.barh(df['Indicator'].value_counts().index, df['Indicator'].value_counts().values, color='skyblue')
-ax2.set_xlabel("Missing Data Columns")
-ax2.tick_params(axis='x', rotation=75)
-plt.tight_layout()
-st.pyplot(fig2)
+
+
