@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import io
 
 st.header("Airbnb site hotel")
 df = pd.read_csv("Airbnb_site_hotel new.csv")
