@@ -39,7 +39,7 @@ st.pyplot(fig3)
 
 st.write("This chart displays the number of host in each city.")
 df['price'] = pd.to_numeric(df['price'], errors='coerce')
-city_host_number = df.groupby('city')['host_name']..nunique()
+city_host_number = df.groupby('city')['host_name'].nunique()
 fig4, ax4 = plt.subplots()
 ax4.bar(city_host_number.index, city_host_number.values)
 ax4.set_xlabel("City")
