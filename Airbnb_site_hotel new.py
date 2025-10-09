@@ -48,3 +48,5 @@ ax4.set_title("Number of host in each city")
 plt.xticks(rotation=45)
 plt.tight_layout()
 st.pyplot(fig4)
+
+st.write(df.info())
