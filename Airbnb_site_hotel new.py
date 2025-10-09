@@ -27,7 +27,7 @@ st.pyplot(fig2)
 
 st.write("This chart displays the average price in each city.")
 df['city'] = pd.to_numeric(df['city'], errors='coerce')
-df['city'] = df['city'].replace('[\$,],'',regex=True)
+df['city'] = df['city'].replace('[\$,]','',regex=True)
 st.write(df['price'].describe())
 #city_average_price = df.groupby('city')['price'].mean()
 #fig3, ax3 = plt.subplots()
