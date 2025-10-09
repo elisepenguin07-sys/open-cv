@@ -33,6 +33,7 @@ ax3.bar(city_average_price.index, city_average_price.values)
 ax3.set_xlabel("City")
 ax3.set_ylabel("price")
 ax3.set_title("Average price in each city")
+plt.xticks(rotation=45)
 plt.tight_layout()
 st.pyplot(fig3)
 
