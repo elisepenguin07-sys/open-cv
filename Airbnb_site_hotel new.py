@@ -59,12 +59,12 @@ plt.tight_layout()
 st.pyplot(fig5)
 
 st.write("This scatter plot shows the relationship between guest ratings and listing prices.")
-df['sales'] = pd.to_numeric(df['sales'], errors='coerce')
+df['sales'] = pd.to_numeric(df['consumer'], errors='coerce')
 df = df[(df['price'] >= 10) & (df['price'] <= 1000)]
-df = df[(df['sales'] >= 0) & (df['sales'] <= 400)]
-df_scatter = df[['price', 'sales']].dropna()
+df = df[(df['consumer'] >= 0) & (df['consumer'] <= 400)]
+df_scatter = df[['price', 'consumer']].dropna()
 fig6, ax6 = plt.subplots()
-ax6.scatter(df_scatter['price'], df_scatter['sales'], alpha=0.5)
+ax6.scatter(df_scatter['price'], df_scatter['consumer'], alpha=0.5)
 ax6.set_title("Price vs. Guest Ratings")
 ax6.set_xlabel("Price")
 ax6.set_ylabel("Guest Ratings")
