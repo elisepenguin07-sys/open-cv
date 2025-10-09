@@ -49,4 +49,10 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 st.pyplot(fig4)
 
-st.write(df.info())
+import io
+
+buffer = io.StringIO()
+df.info(buf=buffer)
+s = buffer.getvalue()
+
+st.text(s)
