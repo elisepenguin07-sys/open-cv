@@ -49,10 +49,11 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 st.pyplot(fig4)
 
-import io
-
-buffer = io.StringIO()
-df.info(buf=buffer)
-s = buffer.getvalue()
-
-st.text(s)
+st.write("This chart shows the distribution of hosts across different areas.")
+areas = df['area'].value_counts()
+fig5, ax5 = plt.subplots()
+ax5.pie(areas.values, labels=areas.index, autopct='%1.1f%%')
+ax5.set_title("Proportion of Hosts by Area")
+plt.xticks(rotation=45)
+plt.tight_layout()
+st.pyplot(fig5)
