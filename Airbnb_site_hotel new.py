@@ -26,6 +26,7 @@ plt.tight_layout()
 st.pyplot(fig2)
 
 st.write("This chart displays the average price in each city.")
+df['city'] = pd.to_numeric(df['city'], errors='coerce')
 city_average_price = df.groupby('city')['price'].mean()
 fig3, ax3 = plt.subplots()
 ax3.bar(city_average_price.index, city_average_price.values)
