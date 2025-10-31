@@ -5,3 +5,5 @@ matplotlib
 seaborn
 python-docx
 xlsxwriter
+cv2
+pytesseract
